@@ -10,6 +10,7 @@ class HelloController extends Controller
 
     public function actionSay($message = 'Hello')
     {
-        return $this->render('say', ['message' => $message]);
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return "Hello China";
     }
 }
